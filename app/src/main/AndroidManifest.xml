@@ -10,14 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PicoyPlacaFriends">
         <activity
-<<<<<<< HEAD
             android:name=".registro.VehicleInfo"
-=======
+            />
+        <activity
             android:name=".SelectRoleActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
->>>>>>> 62c96f65587d8de3cca27897fad11180a19f4249
             android:exported="false" />
         <activity
             android:name=".MainActivity"
