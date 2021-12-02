@@ -27,9 +27,13 @@ public class VehicleInfo extends AppCompatActivity {
     private FirebaseFirestore db;
 
     private ActivityResultLauncher<Intent> launcher;
-private TextView archive;
+    private TextView archive;
     private EditText p1, p2, p3, p4, p5, p6;
     private Button btNextVehicleInfo, upFile;
+
+
+    private String fileName;
+    private Uri uri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,40 +52,42 @@ private TextView archive;
         p6 = findViewById(R.id.p6);
         upFile = findViewById(R.id.upload);
         archive = findViewById(R.id.archive);
-//        btNextVehicleInfo.setOnClickListener(v -> {
-//            //INTENT: Se lanza la actividad de correspondiente a la información personal de un usuario
-//            Intent intent = new Intent(this, PersonalInfoActivity.class);
-//            startActivity(intent);
-//        });
+        btNextVehicleInfo.setOnClickListener(this::addVehicle);
         upFile.setOnClickListener(this::openGallery);
 
     }
 
     private void galleryResult(ActivityResult result) {
-        if(result.getResultCode() == RESULT_OK){
-            Uri uri =result.getData().getData();
-
-            String fileName = "tarjeta "+placa;
+        if (result.getResultCode() == RESULT_OK) {
+            uri = result.getData().getData();
+            fileName = "tarjeta" + placa;
             archive.setText(uri.toString());
-            FirebaseStorage.getInstance().getReference().child("documentos").child(fileName).putFile(uri);
             vehicle.setTarjetaPropiedadId(fileName);
         }
     }
 
-    public void addVehicle(){
+    public void addVehicle(View view) {
         vehicle.setPlaca(placa);
         db.collection("users").document(email).collection("vehicle").document(placa).set(vehicle);
+        db.collection("users").document(email).update("registryProgress", 3);
+        db.collection("users").document(email).update("tarjetaPropiedad", fileName);
+        FirebaseStorage.getInstance().getReference().child("documentos").child(fileName).putFile(uri);
+
+        //INTENT: Se lanza la actividad de correspondiente a la información personal de un usuario
+        Intent intent = new Intent(this, UserAndPasswordActivity.class);
+        intent.putExtra("email", email);
+        startActivity(intent);
+
     }
 
-    public void openGallery(View view){
-        placa = p1.getText().toString()+p2.getText().toString()+p3.getText().toString()+p4.getText().toString()+p5.getText().toString()+p6.getText().toString();
-        if(placa.split("").length == 6){
+    public void openGallery(View view) {
+        placa = p1.getText().toString() + p2.getText().toString() + p3.getText().toString() + p4.getText().toString() + p5.getText().toString() + p6.getText().toString();
+        if (placa.split("").length == 6) {
             Intent i = new Intent(Intent.ACTION_GET_CONTENT);
             i.setType("application/pdf");
             launcher.launch(i);
-        }
-        else{
-            Toast.makeText(this,"escribe la placa primero", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "escribe la placa primero", Toast.LENGTH_LONG).show();
         }
 
     }

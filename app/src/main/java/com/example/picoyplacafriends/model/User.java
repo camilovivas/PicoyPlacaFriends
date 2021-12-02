@@ -2,19 +2,20 @@ package com.example.picoyplacafriends.model;
 
 public class User {
 
-    private String name, lastname, documento, email, telefono, password;
+    private String name, lastname, documento, email, telefono, password, tarjetaPropiedad;
     private int registryProgress;
 
     public User() {
     }
 
-    public User(String name, String lastname,String documento, String email, String telefono, String password, int registryProgress) {
+    public User(String name, String lastname,String documento, String email, String telefono, String password, String tarjetaPropiedad, int registryProgress) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.telefono = telefono;
         this.lastname = lastname;
         this.documento = documento;
+        this.tarjetaPropiedad = tarjetaPropiedad;
         this.registryProgress = registryProgress;
     }
 
@@ -44,5 +45,9 @@ public class User {
 
     public int getRegistryProgress() {
         return registryProgress;
+    }
+
+    public String getTarjetaPropiedad() {
+        return tarjetaPropiedad;
     }
 }
