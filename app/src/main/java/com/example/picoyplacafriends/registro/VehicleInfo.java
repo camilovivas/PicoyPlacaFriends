@@ -72,7 +72,7 @@ public class VehicleInfo extends AppCompatActivity {
 
     public void openGallery(View view){
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-        i.setType("image/*");
+        i.setType("application/pdf");
         launcher.launch(i);
     }
 }
