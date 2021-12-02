@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.picoyplacafriends.R;
 import com.example.picoyplacafriends.model.Vehicle;
@@ -25,7 +27,7 @@ public class VehicleInfo extends AppCompatActivity {
     private FirebaseFirestore db;
 
     private ActivityResultLauncher<Intent> launcher;
-
+private TextView archive;
     private EditText p1, p2, p3, p4, p5, p6;
     private Button btNextVehicleInfo, upFile;
     @Override
@@ -45,6 +47,7 @@ public class VehicleInfo extends AppCompatActivity {
         p5 = findViewById(R.id.p5);
         p6 = findViewById(R.id.p6);
         upFile = findViewById(R.id.upload);
+        archive = findViewById(R.id.archive);
 //        btNextVehicleInfo.setOnClickListener(v -> {
 //            //INTENT: Se lanza la actividad de correspondiente a la información personal de un usuario
 //            Intent intent = new Intent(this, PersonalInfoActivity.class);
@@ -58,21 +61,28 @@ public class VehicleInfo extends AppCompatActivity {
         if(result.getResultCode() == RESULT_OK){
             Uri uri =result.getData().getData();
 
-            String fileName = "tarjeta"+placa;
-            FirebaseStorage.getInstance().getReference().child("fotos").child(fileName).putFile(uri);
+            String fileName = "tarjeta "+placa;
+            archive.setText(uri.toString());
+            FirebaseStorage.getInstance().getReference().child("documentos").child(fileName).putFile(uri);
             vehicle.setTarjetaPropiedadId(fileName);
         }
     }
 
     public void addVehicle(){
         vehicle.setPlaca(placa);
-        placa = p1.getText().toString()+p2.getText().toString()+p3.getText().toString()+p4.getText().toString()+p5.getText().toString()+p6.getText().toString();
         db.collection("users").document(email).collection("vehicle").document(placa).set(vehicle);
     }
 
     public void openGallery(View view){
-        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-        i.setType("application/pdf");
-        launcher.launch(i);
+        placa = p1.getText().toString()+p2.getText().toString()+p3.getText().toString()+p4.getText().toString()+p5.getText().toString()+p6.getText().toString();
+        if(placa.split("").length == 6){
+            Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+            i.setType("application/pdf");
+            launcher.launch(i);
+        }
+        else{
+            Toast.makeText(this,"escribe la placa primero", Toast.LENGTH_LONG).show();
+        }
+
     }
 }
