@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PicoyPlacaFriends">
         <activity
+            android:name=".registro.UserAndPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registro.PersonalInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".registro.ContactInformationActivity"
             android:exported="false" />
         <activity
