@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PicoyPlacaFriends">
         <activity
-            android:name=".registro.VehicleInfo"
-            />
+            android:name=".registro.ContactInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registro.DataPolicyActivity"
+            android:exported="false" />
+        <activity android:name=".registro.VehicleInfo" />
         <activity
             android:name=".SelectRoleActivity"
             android:exported="false" />
