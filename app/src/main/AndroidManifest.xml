@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".registro.InitialRouteInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".registro.UserAndPasswordActivity"
             android:exported="false" />
         <activity
