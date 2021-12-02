@@ -56,8 +56,10 @@ public class PersonalInfoActivity extends AppCompatActivity {
         db.collection("users").document(email).update("name", name);
         db.collection("users").document(email).update("lastname", lastName);
         db.collection("users").document(email).update("documento", document);
+        db.collection("users").document(email).update("registryProgress", 2);
         //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
         Intent intent = new Intent(this, VehicleInfo.class);
+        intent.putExtra("email",email);
         startActivity(intent);
     }
 
@@ -71,14 +73,14 @@ public class PersonalInfoActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.rbIdentityCard:
                 if (ismarket) {
-                    txEDocument.setHint("Digite su número de su cédula de ciudadanía ");
+                    txEDocument.setHint("Digite su tarjeta de identidad");
                     // Aquí se realizará el proceso de validación de la cédula de ciudadanía
                 }
                 break;
 
             case R.id.rbCitizenshipCard:
                 if (ismarket) {
-                    txEDocument.setHint("Digite su tarjeta de identidad");
+                    txEDocument.setHint("Digite su número de su cédula de ciudadanía");
                     // Aquí se realizará el proceso de validación de la tarjeta de identidad
                 }
                 break;

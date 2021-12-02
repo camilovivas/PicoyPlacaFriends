@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRegister">
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/p6"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -47,43 +47,43 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/p2"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintStart_toEndOf="@+id/p1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/p3"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toEndOf="@+id/p2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/p5"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName6"
+            app:layout_constraintEnd_toStartOf="@+id/p6"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/p4"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName5"
+            app:layout_constraintEnd_toStartOf="@+id/p5"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/p1"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -98,8 +98,8 @@
             android:text="-"
             android:textAlignment="center"
             android:textSize="48sp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toStartOf="@+id/p4"
+            app:layout_constraintStart_toEndOf="@+id/p3"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -128,7 +128,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

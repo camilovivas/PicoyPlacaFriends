@@ -19,4 +19,12 @@ public class Vehicle {
     public String getTarjetaPropiedadId() {
         return tarjetaPropiedadId;
     }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public void setTarjetaPropiedadId(String tarjetaPropiedadId) {
+        this.tarjetaPropiedadId = tarjetaPropiedadId;
+    }
 }
