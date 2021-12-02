@@ -3,13 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.570840197693575" />
-        <entry key="app/src/main/res/layout/activity_contact_information.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_data_policy.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_select_role.xml" value="0.19895833333333332" />
-        <entry key="app/src/main/res/layout/activity_vehicle_info.xml" value="0.17" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_contact_information.xml" value="0.20921052631578949" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_data_policy.xml" value="0.20921052631578949" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_select_role.xml" value="0.136" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.20921052631578949" />
       </map>
     </option>
   </component>
@@ -18,12 +17,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.33" />
-      </ProjectState>
-    </option>
   </component>
 </project>
