@@ -3,16 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_contact_information.xml" value="0.25" />
+        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_data_policy.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.570840197693575" />
+        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_main.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_contact_information.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_data_policy.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_initial_route_info.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_personal_info.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_select_role.xml" value="0.19895833333333332" />
-        <entry key="app/src/main/res/layout/activity_user_and_password.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_vehicle_info.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_vehicle_info.xml" value="0.17" />
       </map>
     </option>
   </component>
