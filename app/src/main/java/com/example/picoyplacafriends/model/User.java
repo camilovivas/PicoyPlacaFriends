@@ -1,6 +1,8 @@
 package com.example.picoyplacafriends.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private String name, lastname, documento, email, telefono, password, tarjetaPropiedad;
     private int registryProgress;
