@@ -17,10 +17,10 @@
             android:exported="false" />
         <activity android:name=".registro.VehicleInfo" />
         <activity
-            android:name=".SelectRoleActivity"
+            android:name=".logueo.SelectRoleActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".logueo.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

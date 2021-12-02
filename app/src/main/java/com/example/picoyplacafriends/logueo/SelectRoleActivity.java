@@ -1,8 +1,10 @@
-package com.example.picoyplacafriends;
+package com.example.picoyplacafriends.logueo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.picoyplacafriends.R;
 
 public class SelectRoleActivity extends AppCompatActivity {
 
