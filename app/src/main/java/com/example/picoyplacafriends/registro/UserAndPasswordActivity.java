@@ -15,15 +15,18 @@ public class UserAndPasswordActivity extends AppCompatActivity {
     private EditText txEPassword;
     private EditText txEChecktPassword;
     private Button btNextUserAndPassword;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_and_password);
+        email = getIntent().getExtras().getString("email");
         //Referencias de los atributos a inicializar
         txEPassword = findViewById(R.id.txEPassword);
         txEChecktPassword = findViewById(R.id.txEChecktPassword);
         btNextUserAndPassword = findViewById(R.id.btNextUserAndPassword);
+
     }
 
     /**
@@ -36,8 +39,8 @@ public class UserAndPasswordActivity extends AppCompatActivity {
         btNextUserAndPassword.setOnClickListener( v -> {
             if(password.equals(checkPassword)){
                 //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
-                //Intent intent = new Intent(this, UserAndPasswordActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, VehicleInfo.class);
+                startActivity(intent);
             }else{
                 txEPassword.setText("");
                 txEChecktPassword.setText("");

@@ -41,14 +41,14 @@ public class ContactInformationActivity extends AppCompatActivity {
         String email = txEmail.getText().toString();
         db.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(
                 task -> {
-                    if (task.getResult().isEmpty()) {
+                    if (!task.getResult().isEmpty()) {
                         Toast.makeText(this, "Este correo ya esta registrado", Toast.LENGTH_LONG).show();
                     } else {
-                        User user = new User("", email, phoneNumber, "");
+                        User user = new User("", "","", email, phoneNumber, "");
                         db.collection("users").document(email).set(user);
 
                         //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
-                        Intent intent = new Intent(this, UserAndPasswordActivity.class);
+                        Intent intent = new Intent(this, PersonalInfoActivity.class);
                         intent.putExtra("email", email);
                         startActivity(intent);
                     }

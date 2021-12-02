@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 import com.example.picoyplacafriends.R;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PersonalInfoActivity extends AppCompatActivity {
 
@@ -21,11 +22,15 @@ public class PersonalInfoActivity extends AppCompatActivity {
     private RadioButton rbIdentityCard;
     private Button btNextActivity;
 
+    private FirebaseFirestore db;
+    private String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
-
+        db = FirebaseFirestore.getInstance();
+        email = getIntent().getExtras().getString("email");
         //Referencias de los atributos a inicializar
         txEAge = findViewById(R.id.txEAge);
         txELastName = findViewById(R.id.txELastName);
@@ -33,24 +38,27 @@ public class PersonalInfoActivity extends AppCompatActivity {
         txEDocument = findViewById(R.id.txEDocument);
         rbCitizenshipCard = findViewById(R.id.rbCitizenshipCard);
         rbIdentityCard = findViewById(R.id.rbIdentityCard);
+        rbCitizenshipCard.setOnClickListener(this::onRadioButtonClicked);
+        rbIdentityCard.setOnClickListener(this::onRadioButtonClicked);
         btNextActivity = findViewById(R.id.btNextActivity);
-        addPersonInfo();
+        btNextActivity.setOnClickListener(this::addPersonInfo);
     }
 
     /**
      * Recoge la información de una persona para ser tratada más adelante.
      */
-    private void addPersonInfo(){
+    private void addPersonInfo(View view) {
         String name = txEName.getText().toString();
         String lastName = txELastName.getText().toString();
         String document = txEDocument.getText().toString();
         String age = txEAge.getText().toString();
 
-        btNextActivity.setOnClickListener(v ->{
-            //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
-            Intent intent = new Intent(this, VehicleInfo.class);
-            startActivity(intent);
-        });
+        db.collection("users").document(email).update("name", name);
+        db.collection("users").document(email).update("lastname", lastName);
+        db.collection("users").document(email).update("documento", document);
+        //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
+        Intent intent = new Intent(this, VehicleInfo.class);
+        startActivity(intent);
     }
 
     /**
