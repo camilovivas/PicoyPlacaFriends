@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "280587044954",
+    "project_id": "picoyplacafriends",
+    "storage_bucket": "picoyplacafriends.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280587044954:android:55a6a30aa85ee5abca7063",
+        "android_client_info": {
+          "package_name": "com.example.picoyplacafriends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280587044954-v6cicn9spbr7cota4ls6kknbn6b3pfav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3TKrkTpz0KuVLP6u4O_7c3sKvAj9Ftss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280587044954-v6cicn9spbr7cota4ls6kknbn6b3pfav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
