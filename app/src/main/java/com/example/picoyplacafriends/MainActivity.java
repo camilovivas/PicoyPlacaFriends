@@ -2,6 +2,7 @@ package com.example.picoyplacafriends;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        requestPermissions(new String[]{
+                Manifest.permission.READ_EXTERNAL_STORAGE
+        }, 1);
         runCounter();
     }
 
