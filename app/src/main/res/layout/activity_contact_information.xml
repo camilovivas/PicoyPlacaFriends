@@ -64,14 +64,14 @@
         android:layout_width="307dp"
         android:layout_height="0dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="69dp"
-        android:text="Introduce tu código de verificación"
+        android:text="Introduce tu correo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/txEPhoneNumber" />
 
     <EditText
         android:id="@+id/txEPhoneNumber"
@@ -88,30 +88,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
-        android:id="@+id/txEVerificationCode"
+        android:id="@+id/txEmail"
         android:layout_width="344dp"
         android:layout_height="0dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
-        android:hint="Ingresa el código de verificación"
-        android:inputType="textPersonName"
+        android:hint="email"
+        android:inputType="textEmailSubject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="345dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="33dp"
-        android:text="Se te enviará un mensaje de texto a tu celular, profavor introduce ese código a continuación:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txEPhoneNumber" />
 
     <Button
         android:id="@+id/btNextContactinfo"
@@ -121,5 +109,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txEVerificationCode" />
+        app:layout_constraintTop_toBottomOf="@+id/txEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>

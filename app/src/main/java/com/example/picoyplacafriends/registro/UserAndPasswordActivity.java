@@ -12,8 +12,6 @@ import com.example.picoyplacafriends.R;
 
 public class UserAndPasswordActivity extends AppCompatActivity {
 
-
-    private EditText txEEmail;
     private EditText txEPassword;
     private EditText txEChecktPassword;
     private Button btNextUserAndPassword;
@@ -23,7 +21,6 @@ public class UserAndPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_and_password);
         //Referencias de los atributos a inicializar
-        txEEmail = findViewById(R.id.txEEmail);
         txEPassword = findViewById(R.id.txEPassword);
         txEChecktPassword = findViewById(R.id.txEChecktPassword);
         btNextUserAndPassword = findViewById(R.id.btNextUserAndPassword);
@@ -33,7 +30,6 @@ public class UserAndPasswordActivity extends AppCompatActivity {
      * Permite obtener los valores digitados por el usuario correspondiente al usuario y contraseña
      */
     private void addUserAndPassword(){
-        String email = txEEmail.getText().toString();
         String password = txEPassword.getText().toString();
         String checkPassword = txEChecktPassword.getText().toString();
 
