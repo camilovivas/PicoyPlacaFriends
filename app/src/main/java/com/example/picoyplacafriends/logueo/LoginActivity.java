@@ -52,13 +52,17 @@ public class LoginActivity extends AppCompatActivity {
                     if (!task.getResult().isEmpty()) {
                         for (DocumentSnapshot ds : task.getResult()) {
                             User user = ds.toObject(User.class);
-                            if(user.getPassword().equals(password)){
-                                Intent i = new Intent(this,SelectRoleActivity.class);
-                                i.putExtra("user", user);
-                                startActivity(i);
+                            if(user.isAprobado() == true){
+                                if (user.getPassword().equals(password)) {
+                                    Intent i = new Intent(this, SelectRoleActivity.class);
+                                    i.putExtra("user", user);
+                                    startActivity(i);
+                                } else {
+                                    Toast.makeText(this, "constraseña incorrecta", Toast.LENGTH_LONG).show();
+                                }
                             }
                             else{
-                                Toast.makeText(this, "constraseña incorrecta", Toast.LENGTH_LONG).show();
+                                Toast.makeText(this, "Todavia estas aprovado, intentalo mas tarde", Toast.LENGTH_LONG).show();
                             }
                             break;
                         }

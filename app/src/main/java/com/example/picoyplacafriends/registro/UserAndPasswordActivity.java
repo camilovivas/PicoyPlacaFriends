@@ -46,6 +46,7 @@ public class UserAndPasswordActivity extends AppCompatActivity {
             if(password.equals(checkPassword)){
                 //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
                 db.collection("users").document(email).update("password", password);
+                db.collection("users").document(email).update("registryProgress", 4);
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
             }else{

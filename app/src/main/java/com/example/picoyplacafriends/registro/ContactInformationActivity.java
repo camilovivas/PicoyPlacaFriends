@@ -45,7 +45,7 @@ public class ContactInformationActivity extends AppCompatActivity {
                         Toast.makeText(this, "Este correo ya esta registrado o tiene un proceso sin terminar", Toast.LENGTH_LONG).show();
                         continueProgress();
                     } else {
-                        User user = new User("", "", "", email, phoneNumber, "", "", 1);
+                        User user = new User("", "", "", email, phoneNumber, "", "", false, 1);
                         db.collection("users").document(email).set(user);
 
                         //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
