@@ -39,22 +39,26 @@ public class ContactInformationActivity extends AppCompatActivity {
     private void addContactInfo(View view) {
         String phoneNumber = txEPhoneNumber.getText().toString();
         String email = txEmail.getText().toString();
-        db.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(
-                task -> {
-                    if (!task.getResult().isEmpty()) {
-                        Toast.makeText(this, "Este correo ya esta registrado o tiene un proceso sin terminar", Toast.LENGTH_LONG).show();
-                        continueProgress();
-                    } else {
-                        User user = new User("", "", "", email, phoneNumber, "", "", false, 1);
-                        db.collection("users").document(email).set(user);
+        if(!(email.isEmpty()) | !(phoneNumber.isEmpty())){
+            db.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(
+                    task -> {
+                        if (!task.getResult().isEmpty()) {
+                            Toast.makeText(this, "Este correo ya esta registrado o tiene un proceso sin terminar", Toast.LENGTH_LONG).show();
+                            continueProgress();
+                        } else {
+                            User user = new User("", "", "", email, phoneNumber, "", "", false, 1);
+                            db.collection("users").document(email).set(user);
 
-                        //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
-                        Intent intent = new Intent(this, PersonalInfoActivity.class);
-                        intent.putExtra("email", email);
-                        startActivity(intent);
+                            //INTENT: Se lanza la actividad de correspondiente a la información de un vehiculo
+                            Intent intent = new Intent(this, PersonalInfoActivity.class);
+                            intent.putExtra("email", email);
+                            startActivity(intent);
+                        }
                     }
-                }
-        );
+            );
+        }else{
+            Toast.makeText(this, "Debe completar todos los campos para poder continuar", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void continueProgress() {

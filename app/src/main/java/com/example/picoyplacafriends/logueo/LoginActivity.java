@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                             else{
-                                Toast.makeText(this, "Todavia estas aprovado, intentalo mas tarde", Toast.LENGTH_LONG).show();
+                                Toast.makeText(this, "Todavia no estas aprobado, intentalo mas tarde", Toast.LENGTH_LONG).show();
                             }
                             break;
                         }
