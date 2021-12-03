@@ -39,7 +39,7 @@ public class ContactInformationActivity extends AppCompatActivity {
     private void addContactInfo(View view) {
         String phoneNumber = txEPhoneNumber.getText().toString();
         String email = txEmail.getText().toString();
-        if(!(email.isEmpty()) | !(phoneNumber.isEmpty())){
+        if(!(email.isEmpty()) && !(phoneNumber.isEmpty())){
             db.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(
                     task -> {
                         if (!task.getResult().isEmpty()) {
