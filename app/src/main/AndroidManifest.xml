@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".configuration.ConfigurationCenterActivity"
+            android:exported="false" />
+        <activity
             android:name=".management.AddSelectRouteActivity"
             android:exported="false" />
         <activity
