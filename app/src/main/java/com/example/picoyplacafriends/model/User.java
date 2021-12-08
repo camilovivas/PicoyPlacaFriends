@@ -6,11 +6,12 @@ public class User implements Serializable {
 
     private String name, lastname, documento, email, telefono, password, tarjetaPropiedad;
     private int registryProgress;
+    private boolean aprobado;
 
     public User() {
     }
 
-    public User(String name, String lastname,String documento, String email, String telefono, String password, String tarjetaPropiedad, int registryProgress) {
+    public User(String name, String lastname,String documento, String email, String telefono, String password, String tarjetaPropiedad, boolean aprobado, int registryProgress) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -18,6 +19,7 @@ public class User implements Serializable {
         this.lastname = lastname;
         this.documento = documento;
         this.tarjetaPropiedad = tarjetaPropiedad;
+        this.aprobado = aprobado;
         this.registryProgress = registryProgress;
     }
 
@@ -51,5 +53,9 @@ public class User implements Serializable {
 
     public String getTarjetaPropiedad() {
         return tarjetaPropiedad;
+    }
+
+    public boolean isAprobado() {
+        return aprobado;
     }
 }

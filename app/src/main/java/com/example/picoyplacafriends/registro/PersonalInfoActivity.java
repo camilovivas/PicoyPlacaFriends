@@ -74,6 +74,7 @@ public class PersonalInfoActivity extends AppCompatActivity {
             case R.id.rbIdentityCard:
                 if (ismarket) {
                     txEDocument.setHint("Digite su tarjeta de identidad");
+                    rbCitizenshipCard.setChecked(false);
                     // Aquí se realizará el proceso de validación de la cédula de ciudadanía
                 }
                 break;
@@ -81,6 +82,8 @@ public class PersonalInfoActivity extends AppCompatActivity {
             case R.id.rbCitizenshipCard:
                 if (ismarket) {
                     txEDocument.setHint("Digite su número de su cédula de ciudadanía");
+                    rbIdentityCard.setChecked(false);
+
                     // Aquí se realizará el proceso de validación de la tarjeta de identidad
                 }
                 break;
