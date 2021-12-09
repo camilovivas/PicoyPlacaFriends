@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".configuration.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".configuration.RouteListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".configuration.ChangeRouteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".configuration.ChangeVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".configuration.InformationUserResumeActivity"
+            android:exported="false" />
+        <activity
             android:name=".configuration.ConfigurationCenterActivity"
             android:exported="false" />
         <activity

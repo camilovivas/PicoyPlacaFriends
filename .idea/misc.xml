@@ -5,13 +5,18 @@
       <map>
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_add_ruote.xml" value="0.152" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_add_select_route.xml" value="0.264" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_change_route.xml" value="0.20921052631578949" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_change_vehicle.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_configuration_center.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_contact_information.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_data_policy.xml" value="0.20921052631578949" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_help.xml" value="0.20921052631578949" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_information_user_resume.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_initial_route_info.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_personal_info.xml" value="0.4" />
+        <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_route_list.xml" value="0.20921052631578949" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_select_role.xml" value="0.264" />
         <entry key="..\:/Users/elias/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.20921052631578949" />
       </map>
