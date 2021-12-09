@@ -147,7 +147,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <EditText
-            android:id="@+id/etChangePlaque"
+            android:id="@+id/etChangeFirstAndLastName"
             android:layout_width="243dp"
             android:layout_height="49dp"
             android:layout_marginTop="5dp"
@@ -170,7 +170,7 @@
             android:layout_marginEnd="108dp"
             android:layout_marginBottom="5dp"
             android:text="Tu ruta diaria actual es:"
-            app:layout_constraintBottom_toTopOf="@+id/etChangePlaque"
+            app:layout_constraintBottom_toTopOf="@+id/etChangeFirstAndLastName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -186,7 +186,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView41"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etChangePlaque" />
+            app:layout_constraintTop_toBottomOf="@+id/etChangeFirstAndLastName" />
 
         <TextView
             android:id="@+id/textView41"
@@ -195,7 +195,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:text="Ingresa tu dirección de origen"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/etNewOrigen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.27"
             app:layout_constraintStart_toStartOf="parent"
@@ -208,11 +208,11 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:text="Ingresa la dirección de destino"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintBottom_toTopOf="@+id/etNewDestino"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.274"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/etNewOrigen" />
 
         <Button
             android:id="@+id/btLoadNewLicenseDriver"
@@ -226,10 +226,10 @@
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout12"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/etNewDestino" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/etNewOrigen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
@@ -246,7 +246,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/etNewDestino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="46dp"

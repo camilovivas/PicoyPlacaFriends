@@ -147,7 +147,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <EditText
-            android:id="@+id/etChangePlaque"
+            android:id="@+id/etChangeFirstAndLastName"
             android:layout_width="243dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
@@ -180,7 +180,7 @@
             app:layout_constraintBottom_toTopOf="@+id/ivNewLicenseDriver"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etChangePlaque" />
+            app:layout_constraintTop_toBottomOf="@+id/etChangeFirstAndLastName" />
 
         <ImageView
             android:id="@+id/ivNewLicenseDriver"
