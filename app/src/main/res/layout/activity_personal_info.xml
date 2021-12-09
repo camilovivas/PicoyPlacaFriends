@@ -4,179 +4,216 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
     tools:context=".registro.PersonalInfoActivity">
-
-    <EditText
-        android:id="@+id/txEAge"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="187dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="179dp"
-        android:text="Edad"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txEDocument" />
-
-    <EditText
-        android:id="@+id/txELastName"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:hint="Digite aquí sus apellidos"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="187dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="179dp"
-        android:text="Apellidos completos"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txEName" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="111dp"
-        android:layout_height="98dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="293dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="27dp"
-        android:text="Recuerda registrar información verificable"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="189dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="179dp"
-        android:text="Informacion personal"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="187dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="179dp"
-        android:text="Nombres completos"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <EditText
-        android:id="@+id/txEName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:hint="Digite aquí sus nombres"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <EditText
-        android:id="@+id/txEDocument"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbIdentityCard" />
-
-    <RadioButton
-        android:id="@+id/rbCitizenshipCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="43dp"
-        android:text="C.C"
-        app:layout_constraintBottom_toBottomOf="@+id/txEDocument"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txELastName" />
-
-    <RadioButton
-        android:id="@+id/rbIdentityCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="222dp"
-        android:text="T.I"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/rbCitizenshipCard"
-        app:layout_constraintTop_toBottomOf="@+id/txELastName" />
-
-    <Button
-        android:id="@+id/btNextActivity"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Siguiente"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txEAge"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/txEDocument"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/rounde_dges_edit_text"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbIdentityCard" />
+
+        <RadioButton
+            android:id="@+id/rbIdentityCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="222dp"
+            android:text="T.I"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rbCitizenshipCard"
+            app:layout_constraintTop_toBottomOf="@+id/txELastName" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="293dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:text="Recuerda registrar información verificable"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbCitizenshipCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="12dp"
+            android:text="C.C"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txELastName" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="179dp"
+            android:text="Nombres completos"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <EditText
+            android:id="@+id/txEAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/rounde_dges_edit_text"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/txELastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/rounde_dges_edit_text"
+            android:ems="10"
+            android:hint="Digite aquí sus apellidos"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="179dp"
+            android:text="Apellidos completos"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txEName" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="179dp"
+            android:text="Edad"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txEDocument" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="179dp"
+            android:text="Informacion personal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/txEName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/rounde_dges_edit_text"
+            android:ems="10"
+            android:hint="Digite aquí sus nombres"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/btNextActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/botton_round_edges"
+            android:text="Siguiente"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txEAge" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="440dp"
+            android:layout_height="163dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btNextActivity"
+            app:srcCompat="@drawable/footer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

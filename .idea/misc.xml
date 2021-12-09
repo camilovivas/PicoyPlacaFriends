@@ -11,8 +11,12 @@
         <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_select_role.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_user_and_password.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/camil/Documents/prograRed/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.5" />
-        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_contact_information.xml" value="0.67" />
-        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_personal_info.xml" value="0.22" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/drawable/botton_round_edges.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/drawable/rounde_dges_edit_text.xml" value="0.240625" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_contact_information.xml" value="0.1" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_data_policy.xml" value="0.22" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_personal_info.xml" value="0.33" />
+        <entry key="..\:/Users/osvan/AndroidStudioProjects/PicoyPlacaFriends/app/src/main/res/layout/activity_vehicle_info.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_contact_information.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_data_policy.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -30,7 +34,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.5" />
       </ProjectState>
     </option>
   </component>

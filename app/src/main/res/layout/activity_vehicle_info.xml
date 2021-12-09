@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    android:visibility="visible"
     tools:context=".registro.VehicleInfo">
 
     <ImageView
@@ -43,7 +45,11 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/p5"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -52,6 +58,10 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/p3"
             app:layout_constraintStart_toEndOf="@+id/p1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,6 +71,10 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toEndOf="@+id/p2"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +84,11 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/p6"
+            app:layout_constraintStart_toEndOf="@+id/p4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -79,7 +97,11 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/p5"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -88,6 +110,10 @@
             android:layout_height="55dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/p2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="placa vehicular"
+        android:text="Placa vehicular"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout"
@@ -121,6 +147,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="164dp"
+        android:background="@drawable/botton_round_edges"
         android:text="Siguiente"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -129,12 +156,16 @@
 
     <Button
         android:id="@+id/upload"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="120dp"
+        android:background="@drawable/botton_round_edges"
         android:text="subir archivo"
-        app:layout_constraintEnd_toEndOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintBottom_toTopOf="@+id/btNextVehicleInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <TextView
@@ -142,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="adjuntar tarjeta de propiedad"
+        android:text="Adjuntar tarjeta de propiedad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -155,4 +186,18 @@
         app:layout_constraintEnd_toEndOf="@+id/upload"
         app:layout_constraintStart_toStartOf="@+id/upload"
         app:layout_constraintTop_toBottomOf="@+id/upload" />
+
+    <Button
+        android:id="@+id/btModifyPlate"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:background="@drawable/botton_round_edges"
+        android:text="Modificar placa"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
