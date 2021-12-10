@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.picoyplacafriends.R;
 import com.example.picoyplacafriends.configuration.ConfigurationCenterActivity;
+import com.example.picoyplacafriends.driversView.AddRouteDriverActivity;
 import com.example.picoyplacafriends.management.AddSelectRouteActivity;
 import com.example.picoyplacafriends.model.User;
 
@@ -40,6 +41,7 @@ public class SelectRoleActivity extends AppCompatActivity {
         ivConfiguration.setOnClickListener(this::goToConfiguration);
 
 
+
     }
 
     private void goToConfiguration(View view) {
@@ -53,7 +55,7 @@ public class SelectRoleActivity extends AppCompatActivity {
     }
 
     private void goToDriver(View view) {
-        Intent intent = new Intent(this, AddSelectRouteActivity.class);
+        Intent intent = new Intent(this, AddRouteDriverActivity.class);
         startActivity(intent);
     }
 
