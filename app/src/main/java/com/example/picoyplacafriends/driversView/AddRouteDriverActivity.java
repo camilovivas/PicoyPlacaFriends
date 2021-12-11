@@ -1,7 +1,6 @@
 package com.example.picoyplacafriends.driversView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -51,12 +50,7 @@ public class AddRouteDriverActivity extends AppCompatActivity {
         //Proceso del linearLayout
         manager = new LinearLayoutManager(this);
         routesRecycler.setLayoutManager(manager);
-
-        /*
-        DividerItemDecoration mDividerItemDecoration = new DividerItemDecoration(routesRecycler.getContext(),
-                manager.getOrientation());
-        routesRecycler.addItemDecoration(mDividerItemDecoration);
-*/
+        //Permite agregar espacio enter viewholders
         SpacingItemDecorator itemDecorator = new SpacingItemDecorator(20);
         routesRecycler.addItemDecoration(itemDecorator);
         //Proceso del recyclerView.
