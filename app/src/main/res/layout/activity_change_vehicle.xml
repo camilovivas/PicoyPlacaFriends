@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
     tools:context=".configuration.ConfigurationCenterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,18 +109,148 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
 
+        <Button
+            android:id="@+id/btModifyPlateChVehicle"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/botton_round_edges"
+            android:text="Modificar placa"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/tvHelpChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Digita la placa del nuevo vehículo"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHelpChat">
+
+            <EditText
+                android:id="@+id/pl1"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pl2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/pl2"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pl3"
+                app:layout_constraintStart_toEndOf="@+id/pl1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/pl3"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/pl2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/pl4"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pl5"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/pl5"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pl6"
+                app:layout_constraintStart_toEndOf="@+id/pl4"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/pl6"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pl5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="17dp"
+                android:layout_height="55dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toStartOf="@+id/pl4"
+                app:layout_constraintStart_toEndOf="@+id/pl3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="19dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button">
+            app:layout_constraintTop_toBottomOf="@+id/btUpdateInfo">
 
             <ImageView
                 android:id="@+id/imageView15"
@@ -148,44 +279,16 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/etChangeFirstAndLastName"
-            android:layout_width="0dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/rounde_dges_edit_text"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvHelpChat"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/tvHelpChat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="108dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="108dp"
-            android:text="Digita la placa del nuevo vehículo"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tvFrequentQuestions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:text="Carga la nueva tarjeta de propiedad"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etChangeFirstAndLastName" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <ImageView
             android:id="@+id/ivNewLicenseDriver"
@@ -202,9 +305,9 @@
         <Button
             android:id="@+id/btLoadNewLicenseDriver"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="120dp"
             android:background="@drawable/botton_round_edges"
             android:text="Cargar"
@@ -214,11 +317,11 @@
             app:layout_constraintTop_toBottomOf="@+id/ivNewLicenseDriver" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btUpdateInfo"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:layout_marginStart="70dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="70dp"
             android:background="@drawable/botton_round_edges"
             android:text="Actualizar información"

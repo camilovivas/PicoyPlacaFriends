@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRegister">
 
         <EditText
-            android:id="@+id/p6"
+            android:id="@+id/pl6"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -49,11 +49,11 @@
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/p5"
+            app:layout_constraintStart_toEndOf="@+id/pl5"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/p2"
+            android:id="@+id/pl2"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -61,12 +61,12 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/p3"
-            app:layout_constraintStart_toEndOf="@+id/p1"
+            app:layout_constraintEnd_toStartOf="@+id/pl3"
+            app:layout_constraintStart_toEndOf="@+id/pl1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/p3"
+            android:id="@+id/pl3"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -75,11 +75,11 @@
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintStart_toEndOf="@+id/p2"
+            app:layout_constraintStart_toEndOf="@+id/pl2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/p5"
+            android:id="@+id/pl5"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -87,12 +87,12 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/p6"
-            app:layout_constraintStart_toEndOf="@+id/p4"
+            app:layout_constraintEnd_toStartOf="@+id/pl6"
+            app:layout_constraintStart_toEndOf="@+id/pl4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/p4"
+            android:id="@+id/pl4"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -100,12 +100,12 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/p5"
+            app:layout_constraintEnd_toStartOf="@+id/pl5"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/p1"
+            android:id="@+id/pl1"
             android:layout_width="48dp"
             android:layout_height="55dp"
             android:ems="10"
@@ -113,7 +113,7 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/p2"
+            app:layout_constraintEnd_toStartOf="@+id/pl2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,8 +124,8 @@
             android:text="-"
             android:textAlignment="center"
             android:textSize="48sp"
-            app:layout_constraintEnd_toStartOf="@+id/p4"
-            app:layout_constraintStart_toEndOf="@+id/p3"
+            app:layout_constraintEnd_toStartOf="@+id/pl4"
+            app:layout_constraintStart_toEndOf="@+id/pl3"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
