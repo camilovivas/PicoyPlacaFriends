@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/eTextComments"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="34dp"
@@ -47,10 +47,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/eTextRouteOfDestination" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/eTextRouteOfDestination"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="34dp"
@@ -81,7 +81,7 @@
             app:layout_constraintTop_toBottomOf="@+id/eTextRouteOfOrigin" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btGetBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="34dp"
@@ -104,7 +104,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+            app:layout_constraintTop_toBottomOf="@+id/iVConfig" />
 
         <ImageView
             android:id="@+id/imageView18"
@@ -133,12 +133,12 @@
             android:layout_marginTop="39dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/balance"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+            app:layout_constraintBottom_toBottomOf="@+id/iVConfig"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView36"
+                android:id="@+id/tVbalance"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="44dp"
@@ -155,13 +155,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/iVConfig"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="39dp"
             android:src="@drawable/config"
             app:layout_constraintEnd_toStartOf="@+id/constraintLayout15"
-            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintStart_toEndOf="@+id/btGetBack"
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="TODO" />
 
@@ -198,23 +198,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout17"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="198dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/routesRecycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -222,6 +226,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
@@ -240,7 +245,7 @@
             android:layout_marginStart="58dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="62dp"
-            android:text="O tambén escoge una ruta"
+            android:text="O también escoge una ruta"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -255,7 +260,7 @@
             android:background="#F26101"
             app:layout_constraintEnd_toEndOf="@+id/textView46"
             app:layout_constraintStart_toStartOf="@+id/textView46"
-            app:layout_constraintTop_toBottomOf="@+id/textView46"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
         <ImageView
             android:id="@+id/imageView20"
