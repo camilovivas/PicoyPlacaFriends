@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * Esta actividad muestra la lista de configuraciones
+ */
 public class ConfigurationCenterActivity extends AppCompatActivity {
 
     private Button btInformationUser, btChangeVehicle, btChangeRoute, btRouteList, btLogout;

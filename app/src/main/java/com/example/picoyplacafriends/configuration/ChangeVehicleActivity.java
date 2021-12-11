@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+/**
+ * Esta actividad se encarga de cambiar la información de un vehiculo
+ */
 public class ChangeVehicleActivity extends AppCompatActivity {
 
     private EditText pl1,pl2,pl3,pl4,pl5,pl6;

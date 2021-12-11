@@ -1,8 +1,10 @@
 package com.example.picoyplacafriends.driversView;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,24 +18,24 @@ public class RouteView extends RecyclerView.ViewHolder {
 
     //Atributos del xml defaultRoute
     private TextView tVHeadBoard;
-    private Button btAcceptRoute;
 
 
     public RouteView(@NonNull View itemView) {
         super(itemView);
         tVHeadBoard = itemView.findViewById(R.id.tVHeadBoard);
-        btAcceptRoute = itemView.findViewById(R.id.btAcceptRoute);
+        itemView.findViewById(R.id.btAcceptRoute).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v("<<a",tVHeadBoard.getText().toString());
+            }
+        });
+
     }
 
      public TextView gettVHeadBoard() {
          return tVHeadBoard;
      }
 
-     public Button getBtAcceptRoute() {
-         return btAcceptRoute;
-     }
 
-     public void setBtAcceptRoute(Button btAcceptRoute) {
-         this.btAcceptRoute = btAcceptRoute;
-     }
+
  }

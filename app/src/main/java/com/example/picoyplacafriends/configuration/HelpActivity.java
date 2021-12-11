@@ -5,6 +5,9 @@ import com.example.picoyplacafriends.R;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * Esta actividad muestra las opciones de ayuda
+ */
 public class HelpActivity extends AppCompatActivity {
 
     private TextView tvFrequentQuestions, tvHelpChat, tvWhatsappLink, tvOfficialPage;

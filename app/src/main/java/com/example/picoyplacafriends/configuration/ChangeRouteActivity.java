@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Permite cambiar las rutas predefinidas de un usuario
+ */
 public class ChangeRouteActivity extends AppCompatActivity {
 
     private EditText etChangePlaque, etNewOrigen, etNewDestino;

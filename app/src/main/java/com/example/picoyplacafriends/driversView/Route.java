@@ -9,13 +9,9 @@ public class Route {
     //Nombre de la ruta guardada, ejemplo: Universidad - Casa
     private String headBoard;
 
-    //Permite acceder a la ruta que quiere usar
-    private Button acceptRoute;
-
-    public Route(String idRoute, String headBoard, Button acceptRoute) {
+    public Route(String idRoute, String headBoard) {
         this.idRoute = idRoute;
         this.headBoard = headBoard;
-        this.acceptRoute = acceptRoute;
     }
 
     public String getIdRoute() {
@@ -26,7 +22,4 @@ public class Route {
         return headBoard;
     }
 
-    public Button getAcceptRoute() {
-        return acceptRoute;
-    }
 }

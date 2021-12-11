@@ -10,6 +10,9 @@ import com.example.picoyplacafriends.utils.SpacingItemDecorator;
 
 import android.os.Bundle;
 
+/**
+ * Muestra la lista de routas predefinidas por el usuario
+ */
 public class RouteListActivity extends AppCompatActivity {
 
     // Variables globales para configurar el recyclerView.

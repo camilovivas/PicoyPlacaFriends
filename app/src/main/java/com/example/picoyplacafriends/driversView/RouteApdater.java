@@ -20,15 +20,18 @@ public class RouteApdater  extends RecyclerView.Adapter<RouteView>{
      * Arraylist de rutas predefinidas.
      */
     private ArrayList<Route> defaultRoutes;
-    private Button bt;
     /**
      * Constructor
      */
     public RouteApdater(){
         defaultRoutes = new ArrayList<>();
-        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Universidad - Casa", bt));
-        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Universidad - Casa", bt));
-        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Universidad - Casa", bt));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Universidad - Casa"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Casa - Universidad"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Gym - Escuela"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Escuela - Gym"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Universidad - Gym"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Gym - Casa"));
+        defaultRoutes.add(new Route(UUID.randomUUID().toString(),"Gym - Universidad"));
     }
 
     /**
@@ -64,8 +67,6 @@ public class RouteApdater  extends RecyclerView.Adapter<RouteView>{
         //Se toma un contacto en la posición dada y se le agrega al viewHolder la información correspondiente
         Route route = defaultRoutes.get(position);
         skeleton.gettVHeadBoard().setText(route.getHeadBoard());
-        skeleton.setBtAcceptRoute(route.getAcceptRoute());
-
     }
 
     /**

@@ -5,6 +5,9 @@ import com.example.picoyplacafriends.R;
 import android.os.Bundle;
 import android.widget.EditText;
 
+/**
+ * Esta actividad muestra el resumen de la información del usuario
+ */
 public class InformationUserResumeActivity extends AppCompatActivity {
 
     private EditText etChangeFirstAndLastName,
