@@ -2,4 +2,6 @@
     <string name="app_name">Pico y Placa Friends</string>
     <string name="title_activity_maps_picoy_placa_friends">MapsPicoyPlacaFriends</string>
     <string name="title_activity_map_picoy_placa_friend">MapPicoyPlacaFriendActivity</string>
+    <string name="facebook_app_id">290137309566369</string>
+    <string name="fb_login_protocol_scheme">fb290137309566369</string>
 </resources>
