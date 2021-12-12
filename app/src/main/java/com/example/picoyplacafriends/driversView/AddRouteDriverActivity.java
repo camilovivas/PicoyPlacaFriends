@@ -73,7 +73,7 @@ public class AddRouteDriverActivity extends AppCompatActivity implements View.On
 
         //Acciones del ediText
         eTextRouteOfOrigin.setOnFocusChangeListener(this);
-      //  eTextRouteOfDestination.setOnFocusChangeListener(this);
+        eTextRouteOfDestination.setOnFocusChangeListener(this);
 
 
     }
