@@ -2,7 +2,10 @@ package com.example.picoyplacafriends.configuration;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.picoyplacafriends.R;
+import com.example.picoyplacafriends.logueo.LoginActivity;
 import com.example.picoyplacafriends.management.AddSelectRouteActivity;
+import com.facebook.login.LoginManager;
+import com.google.firebase.auth.FirebaseAuth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -51,7 +54,10 @@ public class ConfigurationCenterActivity extends AppCompatActivity {
 
 
     private void gotToLogout(View view) {
-
+        LoginManager.getInstance().logOut();
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void gotToRouteList(View view) {
