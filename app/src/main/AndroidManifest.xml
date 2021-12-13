@@ -31,7 +31,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB5UPERO20R9VRvZYFGKrgdhxF21x3GR1E" />
+            android:value="AIzaSyCi5iaQc9ETGpo0BymXVi16Rslt0NxMyv4" />
 
         <activity
             android:name=".maps.MapPicoyPlacaFriendActivity"

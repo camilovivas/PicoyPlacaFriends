@@ -4,4 +4,5 @@
     <string name="title_activity_map_picoy_placa_friend">MapPicoyPlacaFriendActivity</string>
     <string name="facebook_app_id">290137309566369</string>
     <string name="fb_login_protocol_scheme">fb290137309566369</string>
+    <string name="api_key">AIzaSyCi5iaQc9ETGpo0BymXVi16Rslt0NxMyv4</string>
 </resources>
