@@ -22,9 +22,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 
 
-public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
+public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
     private GoogleMap mMap;
+    private ActivityMapPicoyPlacaFriendBinding binding;
     //Permite obtener la ultima ubicación del GPS
     private LocationManager locationManager;
 
@@ -33,7 +34,8 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_picoy_placa_friend);
+        binding = ActivityMapPicoyPlacaFriendBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -54,11 +56,6 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
          */
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,2,this);
         setInitialPosition();
-
-        //Llamado del metodo que permite controlar la camara con el clik
-        mMap.setOnMapClickListener(this);
-        //Llamado del metodo que permite añadir un marcador en la posición que sostenga.
-        mMap.setOnMapLongClickListener(this);
     }
 
     /**
@@ -93,20 +90,6 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
         }else{
             myMarker.setPosition(myPos);
         }
-        //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myPos,17));
-    }
-
-    /**
-     * Este metodo permite enfocar la camara de acuerdo al click del usuario
-     * @param latLng latitud y longitud del punto en el mapa.
-     */
-    @Override
-    public void onMapClick(@NonNull LatLng latLng) {
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
-    }
-
-    @Override
-    public void onMapLongClick(@NonNull LatLng latLng) {
-        mMap.addMarker(new MarkerOptions().position(latLng).title("Marcador"));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myPos,17));
     }
 }
