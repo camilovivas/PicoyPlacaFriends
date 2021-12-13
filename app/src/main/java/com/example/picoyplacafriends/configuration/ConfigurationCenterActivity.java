@@ -3,7 +3,6 @@ package com.example.picoyplacafriends.configuration;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.picoyplacafriends.R;
 import com.example.picoyplacafriends.logueo.LoginActivity;
-import com.example.picoyplacafriends.management.AddSelectRouteActivity;
 import com.example.picoyplacafriends.model.User;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
@@ -12,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -21,6 +21,7 @@ public class ConfigurationCenterActivity extends AppCompatActivity {
 
     private Button btInformationUser, btChangeVehicle, btChangeRoute, btRouteList, btLogout;
     private TextView tvFrequentQuestions;
+    private ImageView ivBackCC;
 
     private User user;
 
@@ -37,6 +38,7 @@ public class ConfigurationCenterActivity extends AppCompatActivity {
         btRouteList = findViewById(R.id.btRouteList);
         btLogout = findViewById(R.id.btLogout);
         tvFrequentQuestions = findViewById(R.id.tvFrequentQuestions);
+        ivBackCC = findViewById(R.id.ivBackIUR);
 
         btInformationUser.setOnClickListener(this::goToInformationUser);
         btChangeVehicle.setOnClickListener(this::gotToChangeVehicle);

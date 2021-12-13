@@ -6,11 +6,14 @@ import com.example.picoyplacafriends.model.User;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.gson.Gson;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 /**
  * Esta actividad muestra el resumen de la información del usuario
@@ -20,6 +23,7 @@ public class InformationUserResumeActivity extends AppCompatActivity {
     private EditText etChangeFirstAndLastName,
             rtChangePlacaVehicle, etChangePicoPlacaDay,
             etFavorsDone, etFavorsReceived, etStarts;
+    private ImageView ivBackIUR;
 
     private User user;
 
@@ -38,6 +42,7 @@ public class InformationUserResumeActivity extends AppCompatActivity {
         etFavorsDone = findViewById(R.id.etFavorsDone);
         etFavorsReceived = findViewById(R.id.etFavorsReceived);
         etStarts = findViewById(R.id.etStarts);
+        ivBackIUR = findViewById(R.id.ivBackIUR);
 
         // Se muestran los datos
         etChangeFirstAndLastName.setHint(user.getName()+" "+user.getLastname());
@@ -46,6 +51,13 @@ public class InformationUserResumeActivity extends AppCompatActivity {
         // Actualiza los datos
         updateUserInformation();
 
+        ivBackIUR.setOnClickListener(this::goToBack);
+    }
+
+    private void goToBack(View view) {
+        Intent intent = new Intent(this, ConfigurationCenterActivity.class);
+        intent.putExtra("user", user);
+        startActivity(intent);
     }
 
     public void updateUserInformation(){

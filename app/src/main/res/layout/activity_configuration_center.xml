@@ -35,12 +35,12 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintStart_toEndOf="@+id/ivBackIUR"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.933" />
 
         <ImageView
-            android:id="@+id/ivBack"
+            android:id="@+id/ivBackIUR"
             android:layout_width="50dp"
             android:layout_height="29dp"
             android:layout_marginStart="16dp"

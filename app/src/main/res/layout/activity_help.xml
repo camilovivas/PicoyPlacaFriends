@@ -77,12 +77,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.381"
-            app:layout_constraintStart_toEndOf="@+id/btBack"
+            app:layout_constraintStart_toEndOf="@+id/btBackV"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
-            android:id="@+id/btBack"
+            android:id="@+id/btBackV"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
@@ -146,7 +146,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/tvHelpChat"
+            android:id="@+id/list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="108dp"
@@ -173,7 +173,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tvOfficialPage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvHelpChat" />
+            app:layout_constraintTop_toBottomOf="@+id/list" />
 
         <TextView
             android:id="@+id/tvOfficialPage"
@@ -199,7 +199,7 @@
             android:text="Preguntas frecuentes"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/tvHelpChat"
+            app:layout_constraintBottom_toTopOf="@+id/list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
