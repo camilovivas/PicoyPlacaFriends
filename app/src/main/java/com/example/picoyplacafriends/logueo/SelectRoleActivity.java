@@ -46,16 +46,19 @@ public class SelectRoleActivity extends AppCompatActivity {
 
     private void goToConfiguration(View view) {
         Intent intent = new Intent(this, ConfigurationCenterActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 
     private void goToPassager(View view) {
         Intent intent = new Intent(this, AddSelectRouteActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 
     private void goToDriver(View view) {
         Intent intent = new Intent(this, AddRouteDriverActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 

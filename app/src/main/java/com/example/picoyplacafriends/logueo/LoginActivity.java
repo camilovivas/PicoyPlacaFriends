@@ -155,8 +155,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void saveUser(User user) {
         SharedPreferences sp = getSharedPreferences("PicoYPlacaFriends", MODE_PRIVATE);
-        String json = new Gson().toJson(user);
-        sp.edit().putString("user", json).apply();
+        String jsonUser = new Gson().toJson(user);
+        sp.edit().putString("user", jsonUser).apply();
     }
 
 
@@ -173,6 +173,7 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUser(FirebaseUser firebaseUser) {
         user.setId(firebaseUser.getUid());
         user.setEmail(firebaseUser.getEmail());
+
     }
 
     private void login(View view) {
@@ -183,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                 task -> {
                     if (!task.getResult().isEmpty()) {
                         for (DocumentSnapshot ds : task.getResult()) {
-                            User user = ds.toObject(User.class);
+                             user = ds.toObject(User.class);
                             if (user.isAprobado() == true) {
                                 if (user.getPassword().equals(password)) {
                                     Intent i = new Intent(this, SelectRoleActivity.class);
