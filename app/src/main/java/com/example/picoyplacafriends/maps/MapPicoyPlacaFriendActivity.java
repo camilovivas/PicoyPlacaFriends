@@ -2,15 +2,14 @@ package com.example.picoyplacafriends.maps;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
-
 import android.annotation.SuppressLint;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-
+import android.widget.Button;
+import android.widget.Toast;
 import com.example.picoyplacafriends.R;
-import com.example.picoyplacafriends.databinding.ActivityMapPicoyPlacaFriendBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,43 +18,54 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.List;
-
-
-public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
+public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private ActivityMapPicoyPlacaFriendBinding binding;
     //Permite obtener la ultima ubicación del GPS
     private LocationManager locationManager;
-
     private Marker myMarker;
+    private Button btMyLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMapPicoyPlacaFriendBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_map_picoy_placa_friend);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         //Declaración del location manager
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+
+        //Declaración de atributos
+        btMyLocation = findViewById(R.id.btMyLocation);
+
+        btMyLocation.setOnClickListener( (v) ->{
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myMarker.getPosition(),16));
+        });
+
+
     }
 
 
     @SuppressLint("MissingPermission")
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull  GoogleMap googleMap) {
         mMap = googleMap;
         //Request a los sensores de gps
         /*
-         * 2: Cada dos metros se actualiza la lat y long
-         * 1000: Cada segundo refresca la lat y long
+         * valor 2: Cada dos metros se actualiza la lat y long
+         * valor 1000: Cada segundo refresca la lat y long
          */
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,2,this);
         setInitialPosition();
+
+        //Llamado del metodo que permite controlar la camara con el clik
+        mMap.setOnMapClickListener(this);
+        //Llamado del metodo que permite añadir un marcador en la posición que sostenga.
+        mMap.setOnMapLongClickListener(this);
+        //Click en cada uno de los mapas
+        mMap.setOnMarkerClickListener(this);
     }
 
     /**
@@ -71,7 +81,6 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
 
     /**
      * Controla el cambio de posición del usuario
-     * @param location
      */
     @Override
     public void onLocationChanged(@NonNull Location location) {
@@ -80,7 +89,6 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
 
     /**
      * Actualiza constantemente la posición en la que se encuentra el usuario
-     * @param location
      */
     public void updateMyLocation(Location location){
         LatLng myPos = new LatLng(location.getLatitude(),location.getLongitude());
@@ -90,6 +98,31 @@ public class MapPicoyPlacaFriendActivity extends FragmentActivity implements OnM
         }else{
             myMarker.setPosition(myPos);
         }
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myPos,17));
+       // mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myPos,17));
     }
+
+    /**
+     * Este metodo permite enfocar la camara de acuerdo al click del usuario
+     * @param latLng latitud y longitud del punto en el mapa.
+     */
+    @Override
+    public void onMapClick(@NonNull LatLng latLng) {
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
+    }
+
+    @Override
+    public void onMapLongClick(@NonNull LatLng latLng) {
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Marcador").snippet("Soy un marcador"));
+    }
+
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+        Toast.makeText(this,marker.getPosition().latitude+", "+marker.getPosition().longitude,Toast.LENGTH_LONG).show();
+        marker.showInfoWindow();
+        return true;
+    }
+
+
+
+
 }
